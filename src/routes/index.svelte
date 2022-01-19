@@ -3,7 +3,7 @@
 	import * as SC from 'svelte-cubed';
 </script>
 
-<SC.Canvas>
+<SC.Canvas antialias background={new THREE.Color('papayawhip')}>
 	<SC.Mesh geometry={new THREE.BoxGeometry()} />
-	<SC.PerspectiveCamera position={[1, 2, 3]} />
+	<SC.PerspectiveCamera position={[2, 1, 1]} />
 </SC.Canvas>

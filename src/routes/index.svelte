@@ -15,14 +15,14 @@
 
 <SC.Canvas
 	antialias
-	background={new THREE.Color('papayawhip')}
-	fog={new THREE.FogExp2('papayawhip', 0.1)}
-	shadows
+	background={new THREE.Color('purple')}
+	fog={new THREE.FogExp2('green', 0.1)}
+	shadows={new THREE.ShadowMaterial(0.5)}
 >
 	<SC.Group position={[0, -height / 2, 0]}>
 		<SC.Mesh
 			geometry={new THREE.PlaneGeometry(50, 50)}
-			material={new THREE.MeshStandardMaterial({ color: 'burlywood' })}
+			material={new THREE.MeshStandardMaterial({ color: 'yellow' })}
 			rotation={[-Math.PI / 2, 0, 0]}
 			receiveShadow
 		/>
@@ -45,7 +45,7 @@
 	<SC.AmbientLight intensity={0.6} />
 	<SC.DirectionalLight intensity={0.6} position={[-2, 3, 2]} shadow={{ mapSize: [2048, 2048] }} />
 </SC.Canvas>
-
+<div id="info">Description</div>
 <div class="controls">
 	<label><input type="range" bind:value={width} min={0.1} max={3} step={0.1} /> width</label>
 	<label><input type="range" bind:value={height} min={0.1} max={3} step={0.1} /> height</label>
